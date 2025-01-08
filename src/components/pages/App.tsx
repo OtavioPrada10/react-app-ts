@@ -1,11 +1,11 @@
 import Formulario from '../formulario/index.tsx'
 import Lista from '../lista/index.tsx';
-import './styles.scss'
+import style from './App.module.scss'
 
 function App() {
 
   return (
-    <div className='AppStyle'>
+    <div className={style.AppStyle}>
       <Formulario />
       <Lista/>
     </div>
