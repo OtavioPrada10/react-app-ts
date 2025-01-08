@@ -1,3 +1,4 @@
+import Item from './item';
 import style from './Lista.module.scss';
 
 function Lista() {
@@ -7,22 +8,21 @@ function Lista() {
 	}, {
 		tarefa: "Javascript",
 		tempo: "01:00:00"
+	},
+	{
+		tarefa: "TesteScript",
+		tempo: "01:00:00"
 	}]
 	return (
 		<aside className={style.listaTarefas}>
 			<h2>Estudos do dia</h2>
 			<ul>
 				{
-					// eslint-disable-next-line @typescript-eslint/no-unused-vars
 					tarefas.map((item, index) => (
-						<li className={style.item}>
-							<h3>
-								{item.tarefa}
-							</h3>
-							<span>
-								{item.tempo}
-							</span>
-						</li>
+						<Item 
+						key={index}
+						{...item}
+						/>
 					))
 				}
 			</ul>
