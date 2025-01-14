@@ -1,5 +1,6 @@
-import Formulario from '../formulario/index.tsx'
-import Lista from '../lista/index.tsx';
+import { Cronometro } from '../Cronometro/index.tsx';
+import Formulario from '../Formulario/index.tsx'
+import Lista from '../Lista/index.tsx';
 import style from './App.module.scss'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className={style.AppStyle}>
       <Formulario />
       <Lista/>
+      <Cronometro/>
     </div>
   );
 };
